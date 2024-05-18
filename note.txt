@@ -1,0 +1,5 @@
+composer create-project laravel/laravel pos-larawire
+composer require livewire/livewire
+npm i tailwindcss postcss autoprefixer tailwind-scrollbar-hide
+npx tailwindcss init -p
+composer require ryangjchandler/blade-tabler-icons
