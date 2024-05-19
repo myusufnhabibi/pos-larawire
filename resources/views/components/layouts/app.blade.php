@@ -15,7 +15,8 @@
     @endauth
 
     @guest
-        <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col justify-center items-center h-screen gap-8">
+            <h1 class="font-bold text-4xl">{{ config('app.name') }}</h1>
             {{ $slot }}
         </div>
     @endguest
