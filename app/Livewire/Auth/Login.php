@@ -12,12 +12,12 @@ class Login extends Component
 
     public function login()
     {
-        $avlidate = $this->validate([
+        $valid = $this->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($avlidate)) {
+        if (Auth::attempt($valid)) {
             return redirect(route('home'), true);
         }
     }

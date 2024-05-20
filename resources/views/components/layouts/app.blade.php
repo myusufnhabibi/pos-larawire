@@ -11,7 +11,17 @@
 
 <body class="bg-base-200 min-h-screen">
     @auth
-
+        <div class="drawer lg:drawer-open">
+            <input id="drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                @livewire('partial.navbar')
+                <label for="drawer" class="btn btn-primary drawer-button">Open drawer</label>
+            </div>
+            <div class="drawer-side">
+                <label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                @livewire('partial.sidebar')
+            </div>
+        </div>
     @endauth
 
     @guest
