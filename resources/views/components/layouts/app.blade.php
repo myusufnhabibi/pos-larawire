@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? config('app.name') }}</title>
     @vite('resources/css/app.css')
 </head>
 
@@ -15,7 +15,7 @@
             <input id="drawer" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content">
                 @livewire('partial.navbar')
-                <label for="drawer" class="btn btn-primary drawer-button">Open drawer</label>
+                {{ $slot }}
             </div>
             <div class="drawer-side">
                 <label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>

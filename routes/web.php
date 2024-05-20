@@ -12,6 +12,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get("/home", Home::class)->name("home");
     Route::get("/profile", Profile::class)->name("profile");
+    Route::get("/logout", Login::class)->name("logout");
 });
 
 Route::middleware('guest')->group(function () {

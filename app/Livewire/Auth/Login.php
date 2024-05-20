@@ -18,7 +18,7 @@ class Login extends Component
         ]);
 
         if (Auth::attempt($valid)) {
-            return redirect(route('home'), true);
+            $this->redirect('home', navigate: true);
         }
     }
 

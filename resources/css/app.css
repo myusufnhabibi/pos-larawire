@@ -27,3 +27,9 @@ html {
 .card {
     @apply bg-base-100 border-2 border-base-300
 }
+
+/* max-w-6xl : mengatur panjang ukuran card, semakin kecil semakin pendek */
+
+.page-wrapper {
+    @apply container w-full max-w-6xl p-6 mx-auto
+}
