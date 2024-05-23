@@ -1,7 +1,7 @@
 <div class="page-wrapper">
     <div class="flex justify-between">
         <input type="search" class="input input-bordered" placeholder="pencarian">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" wire:click="$dispatch('createMenu')">
             <x-tabler-search class="size-5" />
             <span>Tambah Menu</span>
         </button>
@@ -38,7 +38,8 @@
                         <td>{{ $menu->harga }}</td>
                         <td>{{ $menu->desc }}</td>
                         <td>
-                            <button class="btn btn-xs btn-square">
+                            <button class="btn btn-xs btn-square"
+                                wire:click="$dispatch('editMenu', {menu : {{ $menu->id }}})">
                                 <x-tabler-edit class="size-4" />
                             </button>
                         </td>

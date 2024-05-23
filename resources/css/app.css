@@ -6,7 +6,7 @@
 
 html {
     font-family: 'Montserrat Alternates', sans-serif;
-    @apply font-semibold
+    @apply font-semibold scrollbar-hide
 }
 /* 100 lebih terang semakin naik gelap */
 
@@ -40,4 +40,8 @@ thead {
 
 .table-wrapper {
     @apply bg-base-100 border-2 border-base-300 rounded-lg;
+}
+
+.modal-box {
+    @apply scrollbar-hide;
 }

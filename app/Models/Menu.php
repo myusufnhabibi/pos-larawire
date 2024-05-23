@@ -15,6 +15,13 @@ class Menu extends Model
 
     //artinya guarded = tidak meloloskan tapi kalo tidak ada isinya boleh masuk semua
 
+    public static $types =  [
+        'coffe',
+        'non-coffe',
+        'tea',
+        'dessert'
+    ];
+
     public function getHargaAttribute()
     {
         return "Rp. " . Number::format($this->price);
